@@ -2,6 +2,7 @@ package ru.katkova;
 
 import ru.katkova.message.BaseMessage;
 import ru.katkova.message.MessageFactory;
+import ru.katkova.registry.AppCodeDictionary;
 import ru.katkova.registry.MapperToRegistryEntity;
 import ru.katkova.registry.Registry;
 
@@ -35,7 +36,9 @@ public class Main {
         // вывод данных
         registry.printAll();
         System.out.println("=============================================================");
-        registry.printAllWithMarker(markerEmail);
+        registry.printAllWithMarker(markerAudio);
+        System.out.println("=============================================================");
+        registry.printAllWithApplication(AppCodeDictionary.findApp(4));
     }
 
     static Integer randomInt() {

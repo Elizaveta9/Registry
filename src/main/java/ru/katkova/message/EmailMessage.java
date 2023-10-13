@@ -1,6 +1,7 @@
 package ru.katkova.message;
 
 import java.time.LocalDateTime;
+import java.util.Random;
 
 public class EmailMessage extends BaseMessage {
     // текст письма
@@ -18,6 +19,8 @@ public class EmailMessage extends BaseMessage {
         this();
         this.text = text;
         this.header = header;
+        appCode = 5;
+
     }
 
     public String getText() {

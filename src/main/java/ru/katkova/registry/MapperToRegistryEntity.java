@@ -21,6 +21,8 @@ public class MapperToRegistryEntity {
         registryEntity.setReceiver(message.getReceiver());
         registryEntity.setTimeSent(message.getTimeSent());
         registryEntity.setMarker(message.getMarker());
+        // находит по словарю название приложения и записывает его вместо номера
+        registryEntity.setApplication(AppCodeDictionary.findApp(message.getAppCode()));
 
         if (message instanceof AudioMessage audioMessage) {
             registryEntity.setDuration(audioMessage.getDuration());

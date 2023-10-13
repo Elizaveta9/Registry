@@ -9,6 +9,8 @@ public abstract class BaseMessage {
     String receiver;
     // время отправки
     LocalDateTime timeSent;
+    // код приложения, с помощью которого быол отправлено сообщение (расшифровка кодов в AppCodesDictionary)
+    Integer appCode;
 
     public abstract String getMarker();
 
@@ -34,5 +36,13 @@ public abstract class BaseMessage {
 
     public void setTimeSent(LocalDateTime timeSent) {
         this.timeSent = timeSent;
+    }
+
+    public Integer getAppCode() {
+        return appCode;
+    }
+
+    public void setAppCode(Integer appCode) {
+        this.appCode = appCode;
     }
 }

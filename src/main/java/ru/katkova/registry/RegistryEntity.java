@@ -16,6 +16,7 @@ public class RegistryEntity {
     private String text;
     private String header;
     private String resolution;
+    private String application;
 
     public RegistryEntity() {
         id = count;
@@ -90,6 +91,14 @@ public class RegistryEntity {
         this.marker = marker;
     }
 
+    public String getApplication() {
+        return application;
+    }
+
+    public void setApplication(String application) {
+        this.application = application;
+    }
+
     @Override
     public String toString() {
         return "RegistryEntity{" +
@@ -102,6 +111,7 @@ public class RegistryEntity {
                 ", text='" + text + '\'' +
                 ", header='" + header + '\'' +
                 ", resolution='" + resolution + '\'' +
+                ", application='" + application + '\'' +
                 '}';
     }
 }

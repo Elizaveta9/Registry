@@ -2,6 +2,7 @@ package ru.katkova.message;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
+import java.util.Random;
 
 public class AudioMessage extends BaseMessage {
     // длительность
@@ -16,6 +17,7 @@ public class AudioMessage extends BaseMessage {
     public AudioMessage(Duration duration) {
         this();
         this.duration = duration;
+        appCode = new Random().nextInt(1,5);
     }
 
     public Duration getDuration() {

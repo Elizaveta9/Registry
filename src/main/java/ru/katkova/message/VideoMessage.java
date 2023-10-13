@@ -2,6 +2,7 @@ package ru.katkova.message;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
+import java.util.Random;
 
 public class VideoMessage extends BaseMessage {
     // длительность
@@ -13,6 +14,7 @@ public class VideoMessage extends BaseMessage {
         sender = "mother";
         receiver = "son";
         timeSent = LocalDateTime.now().minusMinutes(46);
+        appCode = new Random().nextInt(1,5);
     }
 
     public VideoMessage(Duration duration, String resolution) {
